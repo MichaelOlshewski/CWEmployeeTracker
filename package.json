@@ -1,0 +1,24 @@
+{
+  "name": "cwemployeetracker",
+  "version": "1.0.0",
+  "description": "A command line application to add, manage, and delete employees out of a MySQL database.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MichaelOlshewski/CWEmployeeTracker.git"
+  },
+  "author": "Michael Olshewski",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MichaelOlshewski/CWEmployeeTracker/issues"
+  },
+  "homepage": "https://github.com/MichaelOlshewski/CWEmployeeTracker#readme",
+  "dependencies": {
+    "console.table": "^0.10.0",
+    "inquirer": "^7.3.3",
+    "mysql": "^2.18.1"
+  }
+}
