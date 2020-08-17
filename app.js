@@ -10,6 +10,84 @@ const database = new Database({
     database: "employee_db"
 })
 
+const addDept = async (deptInfo) => {
+    
+}
+
+const addDeptInfo = async () => {
+    return inquirer.prompt([
+        {
+            type: "input",
+            message: "What is the name of the new Department?",
+            name: "deptName"
+        }
+    ])
+}
+
+const getManagerNames = async () => {
+
+}
+
+const getRoles = async () => {
+
+}
+
+const getDeptNames = async () => {
+
+}
+
+const getDeptId = async () => {
+
+}
+
+const getRoleId = async () => {
+
+}
+
+const getEmId = async () => {
+
+}
+
+const getEmNames = async () => {
+
+}
+
+const viewAllRoles = async () => {
+
+}
+
+const viewAllDepts = async () => {
+
+}
+
+const viewAllEmployees = async () => {
+
+}
+
+const viewAllByDept = async () => {
+
+}
+
+const getFirstAndLast = async (fullName) => {
+
+}
+
+const updateEmRole = async (emInfo) => {
+
+}
+
+const addEm = async (emInfo) => {
+
+}
+
+const removeEmployee = async (emInfo) => {
+
+}
+
+const addRole = async (roleInfo) => {
+
+}
+
 const mainPrompt = async () => {
     return inquirer.prompt([
         {
@@ -17,19 +95,23 @@ const mainPrompt = async () => {
             message: 'What would you like to do?',
             name: 'action',
             choices: [
-                "Add department",
-                "Add employee",
-                "Add role",
-                "Remove employee",
-                "Update employee role",
-                "View all departments",
-                "View all employees",
-                "View all employees by department",
-                "View all roles",
-                "Exit"
+                "Add Department", 
+                "Add Employee", // 
+                "Add Role", // 
+                "Remove Employee", // 
+                "Update Employee Role", // 
+                "View All Departments", // done
+                "View All Employees", // done
+                "View All Employees by Department", // done
+                "View All Roles", // done
+                "Exit" // done
             ]
         }
     ])
+}
+
+const getAddEmInfo = async () {
+    
 }
 
 const init = async () => {
@@ -39,43 +121,31 @@ const init = async () => {
 
         switch (prompt.action) {
             case 'Add Department': {
-                const newDeptName = await getDeptInfo()
-                await addDeptment(newDeptName)
-                break
+
             }
             case 'Add Employee': {
-                const newEmployee = await addEmployeeInfo()
-                console.log("add an employee")
-                console.log(newEmployee)
-                await addEmployee(newEmployee)
-                break
+
             }
             case 'Add Role': {
-                const newRole = await roleInfo()
-                console.log("add a role")
-                await addRole(newRole)
-                break
+
             }
             case 'Remove Employee': {
-                const em = await removeEmployeeInfo()
-                await removeEmployee(em)
-                break
+                
             }
             case 'Update Employee Role': {
-                const em = await updateEmployeeRole()
-                await updateEmployee(em)
+                
             }
             case 'View All Departments': {
-                await viewAllDepts()
-                break
+                
+            }
+            case 'View All Employees': {
+                
             }
             case 'View All Employees by Department': {
-                await viewAllEmployees()
-                break
+                
             }
             case 'View All Roles': {
-                await viewAllRoles()
-                break
+
             }
             case 'Exit': {
                 quit = true;
@@ -85,13 +155,6 @@ const init = async () => {
         }
     }
 }
-
-const viewAllRows = async () => {
-
-}
-
-
-
 
 process.on("exit", async function(code) {
     await con.close()
